@@ -41,14 +41,14 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Docs: https://github.com/shivammathur/setup-php
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          extensions: sqlite3
+          extensions: curl, libxml, mbstring, sqlite3
           ini-values: error_reporting=E_ALL
           tools: composer:v2
           coverage: none
