@@ -11,10 +11,10 @@ trait HasEvents
      *
      * @return void
      */
-    public static function bootHasEvents()
-    {
-        static::observe(new NodeObserver);
-    }
+    // public static function bootHasEvents()
+    // {
+    //     static::observe(new NodeObserver);
+    // }
 
     /**
      * Initialize the HasEvents trait for an instance.
